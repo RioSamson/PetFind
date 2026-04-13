@@ -1,73 +1,29 @@
-# React + TypeScript + Vite
+# Catalog Viewer
+- I tried to hit all the requirements, but my styling may not be the best it can be
+- The styling is mostly from the vite react template - I just kept most of it and changed some things
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# All assignment listed features implemented
 
-Currently, two official plugins are available:
+# Set-up
+- API setup:
+        VITE_JSONBIN_API_KEY=<JSONbin API KEY>
+        VITE_JSONBIN_BIN_ID=<JSONbin BIN ID>
+        VITE_IMGBB_API_KEY=<imgBB api KEY>
+  you will need to aquire your api keys for JSONbin and ImgBB
+  you will also need to put in the bin id for jsonBin (so you will need to have a bin created already)
+    - if you want some starter JSON to put into your bin, you can use this:
+    ```
+    {
+      "reports": []
+    }
+    ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- npm install
+- npm run dev
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 1. References:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+#### 1. I used chatGPT to learn about different big concepts. I also used it to learn on the way about better ways to implement things and be more concise with my solutions. If I saw any interesting ways to do things, I implemented them into my own code just for learning - for example Conditional rendering
